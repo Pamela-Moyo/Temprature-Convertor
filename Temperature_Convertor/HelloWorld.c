@@ -20,17 +20,17 @@ int main() {
 
 	if (unit == 'F') {
 		printf("Celsius\tFahrenheit\n"); // table headers
-		for (int i = LOWER; i <= UPPER; i=i+20) {
+		for (int i = LOWER; i <= UPPER; i+=20) {
 			float celsius;
-			celsius = (5.0 / 9.0) * ((float)i - (float)32); //  casting to float to avoid data loss
+			celsius = ((float)(5.0 / 9.0)) * (i - 32); //  casting to float to avoid data loss
 			printf("%d\t %.2f\n", i, celsius);
 		}
 	}
 	else if (unit == 'C') {
 		printf("Celsius\tFahrenheit\n");
-		for (int i = LOWER; i <= UPPER; i = i + 20) {
+		for (int i = LOWER; i <= UPPER; i+=20) {
 			float fahr;
-			fahr = ((9.0 / 5.0) * (float) i) + (float) 32;
+			fahr = ((float)(9.0/5.0))* i + 32;
 			printf("%d\t %.2f\n", i, fahr);
 		}
 	}
